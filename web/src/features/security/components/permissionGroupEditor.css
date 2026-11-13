@@ -1,0 +1,36 @@
+.ui-modal.ui-modal-comfortable .permission-group-body { display: flex; flex-direction: column; padding: 12px; font-size: 12px; line-height: 1.5; }
+.permission-group-fields { display: flex; flex-direction: column; flex: 1; width: 100%; min-width: 0; min-height: 0; }
+.permission-group-editor { display: grid; grid-template-columns: 260px minmax(0, 1fr); flex: 1; width: 100%; min-width: 0; min-height: 0; gap: 12px; }
+.permission-group-sidebar { display: flex; flex-direction: column; gap: 14px; min-width: 0; min-height: 0; overflow-y: auto; padding-right: 8px; }
+.permission-group-info { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; flex-shrink: 0; }
+.permission-group-info > * { min-width: 0; }
+.permission-group-enabled { display: flex; align-items: center; gap: 8px; min-height: 24px; white-space: nowrap; }
+.permission-group-templates { display: flex; align-items: flex-start; gap: 8px; flex-direction: column; flex-shrink: 0; }
+.permission-group-copy { width: 100%; min-width: 0; }
+.permission-group-tree { display: flex; flex-direction: column; flex: 1; min-width: 0; min-height: 280px; overflow: hidden; }
+.permission-group-tree-content { flex: 1; min-height: 0; min-width: 0; }
+/* Keep the permission table compact inside the comfortable metadata form. */
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-editor :is(label, input:not([type="checkbox"]), button[aria-haspopup="listbox"], h3) { font-size: 12px !important; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-sidebar button[aria-haspopup="listbox"] { min-height: 32px; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-info > div > div { height: 36px !important; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-sidebar input:not([type="checkbox"]) { padding-top: 4px; padding-bottom: 4px; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-tree label { font-size: 12px !important; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-tree button[aria-haspopup="listbox"],
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-templates button[aria-haspopup="listbox"] { min-height: 32px; font-size: 12px; }
+.ui-modal.ui-modal-comfortable .permission-group-body .permission-group-tree input:not([type="checkbox"]) { font-size: 12px !important; padding-top: 0; padding-bottom: 0; }
+@media (max-width: 800px) {
+ .permission-group-editor { grid-template-columns: minmax(0, 1fr); }
+ .permission-group-sidebar { overflow: visible; padding-right: 0; }
+ .permission-group-info { grid-template-columns: minmax(0, 1fr); }
+ .permission-group-enabled { grid-column: 1 / -1; min-height: 24px; }
+ .permission-group-tree { flex: none; height: 460px; min-height: 360px; }
+ .permission-group-fields, .permission-group-editor { flex: none; }
+ .permission-group-templates { flex-direction: row; flex-wrap: wrap; align-items: center; }
+ .permission-group-copy { width: 260px; max-width: 100%; }
+}
+@media (max-width: 440px) {
+ .ui-modal.ui-modal-comfortable .permission-group-body { padding: 12px; }
+ .permission-group-info { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+ .permission-group-copy { width: 100%; }
+ .permission-group-templates { gap: 8px; }
+}

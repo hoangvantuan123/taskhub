@@ -1,0 +1,7 @@
+{"level":"INFO","ts":"2026-10-18T00:41:22.867+0700","caller":"server/main.go:62","msg":"Starting User Microservice (Go)"}
+{"level":"INFO","ts":"2026-10-18T00:41:22.919+0700","caller":"database/db.go:65","msg":"Auto-detected PostgreSQL max_connections setting","server_max_connections":100,"auto_pool_max_conns":35,"auto_pool_min_conns":8}
+{"level":"INFO","ts":"2026-10-18T00:41:22.919+0700","caller":"database/db.go:79","msg":"Successfully connected to Primary Database (GORM & SQLX Auto-Tuned)","max_conns":35,"min_conns":8}
+{"level":"INFO","ts":"2026-10-18T00:41:22.948+0700","caller":"database/db.go:105","msg":"Successfully connected to Logs Database (GORM & SQLX Auto-Tuned)"}
+{"level":"INFO","ts":"2026-10-18T00:41:22.951+0700","caller":"database/db.go:451","msg":"Verified Log & Audit Database tables (_ERPLoginFullLogs, _SysFullAuditLog)"}
+{"level":"WARN","ts":"2026-10-18T00:41:22.965+0700","caller":"database/db.go:350","msg":"Could not auto-verify ERP tables schema","error":"ERROR: bản ghi \"new\" không có trường \"AuditOrigin\" (SQLSTATE 42703)"}
+{"level":"FATAL","ts":"2026-10-18T00:41:22.967+0700","caller":"server/main.go:66","msg":"Failed to connect to database","error":"verify permission UserSeq columns: ERROR: relation \"_ERPRolesUsers\" does not exist (SQLSTATE 42P01)","stacktrace":"main.main\n\tC:/Users/tuanhoang/Desktop/skillhub/service/server-core/cmd/server/main.go:66\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:285"}

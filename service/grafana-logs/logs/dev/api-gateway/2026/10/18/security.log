@@ -1,0 +1,1 @@
+{"level":"warn","time":"2026-10-18T01:18:58.944+0700","msg":"Blocked unauthorized request: Missing security headers (Postman/Scanner detected)","ip":"127.0.0.1","path":"/api/v2/assessment/list","user_agent":"curl/8.21.0"}
